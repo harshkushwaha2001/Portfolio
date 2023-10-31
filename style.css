@@ -78,6 +78,8 @@ body {
         margin-left: 0;
         width: 100%;
         transform: translateX(-300px);
+        border-radius: 5px;
+
     }
 
 }
@@ -112,7 +114,7 @@ body {
     background: rgba(255, 1, 242, 0.263);
     animation: animate 25s linear infinite;
     bottom: -150px;
-
+    box-shadow: 0 0 15px rgb(237, 252, 30)
 }
 
 .circles li:nth-child(1) {
@@ -248,6 +250,11 @@ body {
     text-align: center;
 }
 
+.name>span {
+    margin: -2px;
+    padding: 0;
+}
+
 hr {
     width: 150px;
 }
@@ -262,6 +269,7 @@ hr {
     border: 2px solid white;
     border-radius: 20px;
     transform: translate(-20px, -20px);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 .img {
@@ -302,7 +310,7 @@ a:active {
 }
 
 .nav {
-    z-index: 1;
+    z-index: 2;
     font-family: 'Ubuntu', sans-serif;
     font-size: medium;
     color: white;
@@ -330,13 +338,13 @@ a:active {
     display: inline;
     margin: 5px;
     border: 2px solid white;
-
+    box-shadow: 0 0 10px rgb(231, 255, 15);
     padding: 4px;
     border-radius: 10px;
 }
 
 .nav-items>li:hover {
-    background-color: rgb(63, 0, 72);
+    background-color: rgb(0, 0, 0);
     border: 1px solid white;
 }
 
@@ -347,6 +355,9 @@ a:active {
 #education {
     margin-left: 300px;
     border: 2px solid white;
+    box-shadow: 0 0 10px rgb(242, 255, 0);
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 #aboutme {
@@ -357,6 +368,10 @@ a:active {
     padding: 25px;
     text-align: center;
     height: 100vh;
+}
+
+#aboutme>h2 {
+    font-size: xx-large;
 }
 
 /* .content {
@@ -378,10 +393,11 @@ a:active {
 
 #skills>h2 {
     font-family: 'Ubuntu', sans-serif;
-    font-size: x-large;
+    font-size: xx-large;
     color: white;
     text-align: center;
     text-decoration: underline;
+    margin-top: 15px;
 }
 
 /* Style skill names */
@@ -398,23 +414,24 @@ a:active {
     margin-top: 5px;
     animation: fill 2s ease-in-out;
     animation-fill-mode: forwards;
-
+    box-shadow: 0 0 15px rgb(236, 196, 20);
 
 }
 
 .skills>h2 {
     text-align: center;
     font-size: large;
+
 }
 
 .skill-level-bar {
     height: 100%;
-    background-color: #0d3401bb;
+    background-color: #00a3c4;
     /* Change the color to your preference */
     border-radius: 5px;
     text-align: right;
     line-height: 20px;
-    color: #fff;
+    color: #ffffff;
     padding: 0 10px;
     border: 2px dotted white;
 
@@ -434,10 +451,19 @@ a:active {
 
 #projects {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 
+}
+
+#projects>h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: xx-large;
+    color: white;
+    flex-basis: 100%;
+    text-align: center;
 }
 
 .project-card {
@@ -445,12 +471,13 @@ a:active {
     font-size: medium;
     color: white;
     border: 2px double white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgb(255, 145, 1);
     border-radius: 5px;
     margin: 20px;
     overflow: hidden;
     width: 300px;
     display: inline-block;
+    z-index: 1;
 }
 
 .project-image img {
@@ -459,7 +486,11 @@ a:active {
 }
 
 .project-info {
+    display: flex;
+    flex-direction: column;
     padding: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-info h3 {
@@ -474,15 +505,20 @@ a:active {
 
 .project-info a {
     text-decoration: none;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
     margin-top: 10px;
-    transition: background-color 0.3s;
+    width: 130px;
+    box-shadow: 0 4px 6px rgb(255, 145, 1);
+    /* transition: background-color 0.3s; */
 }
 
+
 .project-info a:hover {
-    background-color: #33b300d6;
+    background-color: #18002cd6;
+    color: white;
+
 }
